@@ -1,0 +1,179 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "movie crawl",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetUpcomingMovies",
+                    "slots": [
+                        {
+                            "name": "industry",
+                            "type": "Industry"
+                        }
+                    ],
+                    "samples": [
+                        "{industry} latest moive",
+                        "{industry} upcoming movies",
+                        "upcoming movies in {industry}",
+                        "upcoming movies for {industry}",
+                        "latest movies in {industry}",
+                        "latest movies for {industry}",
+                        "tell me upcoming movies of {industry}",
+                        "tell me upcoming movies in {industry}",
+                        "tell me latest movies of {industry}",
+                        "tell me latest movies in {industry}"
+                    ]
+                },
+                {
+                    "name": "GetMovieReleases",
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "on {date}",
+                                "{date}"
+                            ]
+                        },
+                        {
+                            "name": "industry",
+                            "type": "Industry",
+                            "samples": [
+                                "{industry}",
+                                "for {industry}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "{date} releases in {industry}",
+                        "{industry} movies releasing on {date}",
+                        "{industry} movies releasing {date}",
+                        "get movies releasing {date} in {industry}",
+                        "get {industry} movies releasing {date}",
+                        "get {industry} movies {date}",
+                        "get movies releasing on {date} in {industry}",
+                        "get movies released {date} in {industry}",
+                        "movies released {date} in {industry}",
+                        "movies on {date} in {industry}",
+                        "movies {date} in {industry}",
+                        "movies releasing on {date} in {industry}",
+                        "tell me movies releasing {date} in {industry}",
+                        "whats coming {date} in {industry}",
+                        "whats coming in {industry} {date}",
+                        "whats coming on {date} in {industry}",
+                        "which movies are releasing on {date} in {industry}",
+                        "which movies are releasing {date} in {industry}",
+                        "which movies are releasing in {industry} {date} ",
+                        "which movies released {date} in {industry}",
+                        "which {industry} movies are releasing on {date}",
+                        "which {industry} movies are releasing {date}"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Industry",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Hollywood"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Bollywood"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "GetUpcomingMovies",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "industry",
+                            "type": "Industry",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "GetMovieReleases",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.767885840558.217466008524"
+                            }
+                        },
+                        {
+                            "name": "industry",
+                            "type": "Industry",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.418787564011.1152923031650"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.767885840558.217466008524",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "When?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "On which date?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.418787564011.1152923031650",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "for hollywood or bollywood?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "For which film industry?"
+                    }
+                ]
+            }
+        ]
+    }
+}

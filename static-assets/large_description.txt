@@ -1,0 +1,11 @@
+Movie Crawl is a skill to help you find information related to upcoming movies, which are releasing this week or coming weeks or you can even find the movies which are releasing on a specific date.
+
+We are releasing many more features in the next version which would enable you to interact with a lot of good features, so stay tuned :slightly_smiling_face:
+
+You can say:
+
+"Alexa, open Movie Crawl"
+"Alexa, start Movie Crawl"
+"Alexa, launch Movie Crawl"
+
+Please leave a 5-star review if you love this skill, or send us an email with your suggestions at 'hello@datavizz.in'. Your 5-star reviews encourage us to keep making more great skills, thanks!
